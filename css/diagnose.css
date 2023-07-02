@@ -13,6 +13,9 @@ main h2 {
 form {
 	padding-bottom: 6rem;
 }
+form.inactive {
+	display: none;
+}
 
 .first-section > div {
 	margin-bottom: 2.5rem;
@@ -136,6 +139,9 @@ textarea {
 
 section.result {
 	display: none;
+}
+section.result.active {
+	display: block;
 }
 section.result h3 {
 	color: #4b539a;
