@@ -7,15 +7,32 @@
 }
 @media screen and (max-width: 900px) {
 	.hero {
+		text-align: center;
+		padding: 5rem 2rem;
 		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 600px) {
+	.hero {
+		padding: 5rem 1rem;
 	}
 }
 .hero h1 {
 	color: #212121;
 	font-size: 2.1875rem;
 	font-weight: 700;
-	line-height: 3.125rem;
+	line-height: 150%;
 	letter-spacing: -0.015rem;
+}
+@media screen and (max-width: 900px) {
+	.hero h1 {
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.hero h1 {
+		font-size: 1.7rem;
+	}
 }
 .hero p {
 	color: #212121;
@@ -27,7 +44,7 @@
 }
 
 .change {
-	border-radius: 40px;
+	border-radius: 20px;
 	background: #4b539a;
 	padding: 4rem;
 	display: grid;
@@ -42,12 +59,28 @@
 		grid-template-columns: 1fr;
 	}
 }
+@media screen and (max-width: 900px) {
+	.change {
+		padding: 2rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.change {
+		margin: 0 1rem;
+		padding: 1.5rem;
+	}
+}
 .change p {
 	font-size: 1.375rem;
 	font-weight: 500;
 	line-height: 180%;
 	letter-spacing: -0.015rem;
 	margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+	.change p {
+		font-size: 1.15rem;
+	}
 }
 
 .online {
@@ -82,6 +115,16 @@
 .about {
 	margin: 8rem 4rem;
 }
+@media screen and (max-width: 900px) {
+	.about {
+		margin: 8rem 2rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.about {
+		margin: 8rem 1rem;
+	}
+}
 .about h2 {
 	margin-bottom: 1rem;
 }
@@ -90,6 +133,11 @@
 	font-weight: 600;
 	line-height: 180%;
 	letter-spacing: -0.015rem;
+}
+@media screen and (max-width: 600px) {
+	.about p {
+		font-size: 1.2rem;
+	}
 }
 .about > div {
 	display: grid;
