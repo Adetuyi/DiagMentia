@@ -11,21 +11,28 @@
 		<link rel="stylesheet" href="./css/diagnose.css" />
 		<title>Diagmentia</title>
 
+		<script src="./scripts/global.js" defer></script>
 		<script src="./scripts/diagnose.js" defer></script>
 	</head>
 	<body>
 		<!-- Navbar start -->
 		<header>
-			<img src="./assets/images/logo.png" alt="DiagMentia" />
+			<a href="index.html">
+				<img src="./assets/images/logo.png" alt="DiagMentia" />
+			</a>
 
-			<nav>
+			<nav id="nav">
 				<ul>
-					<li>About</li>
-					<li>Features</li>
-					<li>Help Center</li>
-					<li>Team</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li>
+						<a href="diagnose.html"><button>Stat Diagnoses</button></a>
+					</li>
 				</ul>
 			</nav>
+			<div class="menu-con" id="menu-con">
+				<img src="./assets/images/hamburger.png" alt="" />
+			</div>
 		</header>
 		<!-- Navbar end -->
 
@@ -144,13 +151,7 @@
 				<div>
 					Positive Symptoms:
 
-					<div class="result-symptoms" id="result-symptoms">
-						<div>Memory Loss</div>
-						<div>Confusion</div>
-						<div>Depression</div>
-						<div>Agitation</div>
-						<div>Hallucination</div>
-					</div>
+					<ul class="result-symptoms" id="result-symptoms"></ul>
 				</div>
 
 				<div class="btn-group">

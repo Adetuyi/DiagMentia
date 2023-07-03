@@ -9,8 +9,8 @@ const handleSubmit = (event) => {
 	const condition = document.querySelector('#condition').value;
 
 	const data = {
-		mmseScore: parseFloat(document.querySelector('#mmse').value),
-		cdrScore: parseInt(document.querySelector('#cdr').value),
+		mmseScore: parseInt(document.querySelector('#mmse').value),
+		cdrScore: parseFloat(document.querySelector('#cdr').value),
 		symptoms: {
 			'Memory Loss': document.getElementById('memory-loss').checked,
 			Confusion: document.getElementById('confusion').checked,
@@ -20,7 +20,7 @@ const handleSubmit = (event) => {
 		},
 	};
 
-	fetch('http://127.0.0.1:5000/diagnose', {
+	fetch('https://temiye.pythonanywhere.com/diagnose', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -53,8 +53,8 @@ function displayResult(data) {
 	document.querySelector('#range-result').innerHTML = dementiaRange || 'N/A';
 	document.querySelector('#result-symptoms').innerHTML =
 		positiveSymptoms.length > 0
-			? positiveSymptoms.reduce((prev, symptom) => (prev += `<div>${symptom}</div>`), '')
-			: 'No positive symptoms reported.';
+			? positiveSymptoms.reduce((prev, symptom) => (prev += `<li>${symptom}</li>`), '')
+			: '<li>No positive symptoms reported.</li>';
 }
 
 document.querySelector('#print').addEventListener('click', () => {

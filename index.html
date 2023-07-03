@@ -10,20 +10,28 @@
 		<link rel="stylesheet" href="./css/global.css" />
 		<link rel="stylesheet" href="./css/homepage.css" />
 		<title>Diagmentia</title>
+
+		<script src="./scripts/global.js" defer></script>
 	</head>
 	<body>
 		<!-- Navbar start -->
 		<header>
-			<img src="./assets/images/logo.png" alt="DiagMentia" />
+			<a href="index.html">
+				<img src="./assets/images/logo.png" alt="DiagMentia" />
+			</a>
 
-			<nav>
+			<nav id="nav">
 				<ul>
-					<li>About</li>
-					<li>Features</li>
-					<li>Help Center</li>
-					<li>Team</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li>
+						<a href="diagnose.html"><button>Stat Diagnoses</button></a>
+					</li>
 				</ul>
 			</nav>
+			<div class="menu-con" id="menu-con">
+				<img src="./assets/images/hamburger.png" alt="" />
+			</div>
 		</header>
 		<!-- Navbar end -->
 
@@ -79,7 +87,7 @@
 		<!-- Online end -->
 
 		<!-- About start -->
-		<section class="about">
+		<section class="about" id="about">
 			<h2>About This Project</h2>
 			<p>
 				At our Dementia Online Diagnosis System, we believe in empowering individuals to assess their cognitive health conveniently and
